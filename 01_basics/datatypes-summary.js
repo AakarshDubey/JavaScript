@@ -22,7 +22,7 @@ let userEmail; // undefined
 const id = Symbol('123') // Symbol
 const anotherid = Symbol('123')
 
-console.log(id === anotherid); // false
+// console.log(id === anotherid); // false
 /* It is false because we used symbol that makes 
 every variable unique even if the value is same
 */
@@ -44,4 +44,40 @@ const myFunction = function() {
     console.log("hello world");  
 } // function
 
-console.log(typeof myFunction) // object function datatype
+// console.log(typeof myFunction) // object function datatype
+
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// Stack (Primitive) , Heap (Non-Primitive)
+
+let myName = "aakarsh";
+let anothername = myName
+
+console.log(anothername);
+
+anothername = "youtube"
+console.log(myName);
+console.log(anothername);
+/* Here in primitve a copy of reference is passed 
+rather than the acctual reference so if we do changes
+in the copy it will not reflect in the original reference.
+*/
+
+
+let userOne = {
+    email: "user@google.com",
+    upi: "user@ybl"
+}
+
+let userTwo = userOne
+console.log(userTwo.email);
+
+userTwo.email = "aakrsh@google.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);
+/* Here in non primitive or reference type the original
+reference is given so if we do any changes it will be
+reflected in the original refernce too.
+*/
