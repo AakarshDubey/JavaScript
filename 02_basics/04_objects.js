@@ -55,13 +55,43 @@ const user = [
 ]
 user[1].email // this is how we can access data from database which come as an array
 
-console.log(tinderUser);
+// console.log(tinderUser);
 
-console.log(Object.keys(tinderUser));
+// console.log(Object.keys(tinderUser));
 //get keys of the object
-console.log(Object.values(tinderUser));
+// console.log(Object.values(tinderUser));
 // get values of the object
-console.log(Object.entries(tinderUser));
+// console.log(Object.entries(tinderUser));
 //key value pair ko arrays bna deta hai, so 2d array bn jata
-console.log(tinderUser.hasOwnProperty('isLoggedIn'));
+// console.log(tinderUser.hasOwnProperty('isLoggedIn'));
 // to check if the key is available in the object
+
+
+// De-Strcturing of Objects
+
+const course = {
+    coursename: "js in hindi",
+    price: "999",
+    courseInstructor: "aakarsh"
+}
+
+// course.courseInstructor
+
+const {courseInstructor: instructor} = course
+//const {courseInstructor} = course //both valid
+/* Here we de structured the object so we can directly
+call the key. By ":" this we can give the key we 
+calling a different name.
+*/
+console.log(instructor);
+
+
+// JSON API
+/* In JSON usually the keys as well as the values
+both are STRINGS.
+*/
+// {
+//     "name": "aakarsh",
+//     "coursename": "js in hindi",
+//     "price": "free"
+// }
